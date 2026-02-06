@@ -180,7 +180,7 @@ a {
 
 /* 🔴 HERO IMAGE ZONE (RED RECTANGLE) */
 .project-images {
-  max-width: 1200px;   /* SAME AS HEADER CONTAINER */
+  max-width: 1500px;   /* SAME AS HEADER CONTAINER */
   margin: 4rem auto;   /* CENTERED */
 }
 
