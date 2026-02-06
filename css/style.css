@@ -104,6 +104,48 @@ a {
   max-width: 600px;
 }
 
+/* ==================
+   About Page
+================== */
+.about {
+  padding: 6rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 3rem;
+}
+
+.about-content h2 {
+  font-size: 1.1rem;
+  margin: 3rem 0 1rem;
+}
+
+.about-content p {
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+
 /* ------------------
    Portfolio Grid
 ------------------ */
