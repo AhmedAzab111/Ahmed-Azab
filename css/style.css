@@ -137,10 +137,6 @@ a {
   margin-top: 4rem;
 }
 
-.project-card {
-  display: block;
-}
-
 .project-card h2 {
   font-size: 1.1rem;
   margin-top: 1rem;
@@ -151,7 +147,7 @@ a {
   color: var(--gray);
 }
 
-/* Portfolio cover images */
+/* Portfolio cover images ONLY */
 .thumb,
 .project-thumb,
 .project-card img {
@@ -163,10 +159,10 @@ a {
 }
 
 /* ==================
-   Project Page — FINAL
+   Project Page — FINAL HERO SOLUTION
 ================== */
 
-/* Project text column */
+/* Text column */
 .project {
   max-width: 800px;
   margin: 0 auto;
@@ -182,20 +178,18 @@ a {
   margin-bottom: 2rem;
 }
 
-/* 🔥 IMAGE ZONE ALIGNED WITH HEADER */
+/* 🔴 HERO IMAGE ZONE (RED RECTANGLE) */
 .project-images {
-  max-width: 1200px;     /* SAME AS HEADER */
-  margin: 5rem auto;     /* CENTER BETWEEN LOGO & NAV */
+  max-width: 1200px;   /* SAME AS HEADER CONTAINER */
+  margin: 4rem auto;   /* CENTERED */
 }
 
-/* Image itself */
+/* 🔥 HERO IMAGE — FILLS THE RECTANGLE */
 .project-images img {
   width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain;   /* NO CROPPING */
+  height: 520px;       /* CONTROLS RECTANGLE HEIGHT */
+  object-fit: cover;  /* FILL AREA */
   display: block;
-  margin: 0 auto;
 }
 
 /* =====================================================
@@ -222,37 +216,4 @@ a {
 
   .logo {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .nav a {
-    margin: 0 1.5rem 0.5rem 0;
-    font-size: 0.85rem;
-  }
-
-  .home-name {
-    font-size: 2.1rem;
-  }
-
-  .home-title {
-    font-size: 0.85rem;
-  }
-
-  /* Project page mobile */
-  .project {
-    max-width: 100%;
-  }
-
-  .project-images {
-    max-width: 100%;
-    margin: 3rem auto;
-  }
-
-  .project-images img {
-    max-height: 320px;
-  }
-
-  .site-footer {
-    padding: 2rem 0;
-  }
-}
+    margi
