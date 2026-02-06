@@ -54,24 +54,6 @@ a {
 }
 
 /* ------------------
-   Hero
------------------- */
-.hero {
-  padding: 6rem 0;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-.hero p {
-  margin-top: 1rem;
-  color: var(--gray);
-  max-width: 600px;
-}
-
-/* ------------------
    Footer
 ------------------ */
 .site-footer {
@@ -145,7 +127,6 @@ a {
   max-width: 600px;
 }
 
-
 /* ------------------
    Portfolio Grid
 ------------------ */
@@ -169,8 +150,8 @@ a {
 /* Portfolio cover image */
 .thumb {
   width: 100%;
-  height: 220px;        /* KEEP THIS */
-  object-fit: cover;   /* IMPORTANT */
+  height: 220px;
+  object-fit: cover;
   background: #eee;
 }
 
@@ -190,26 +171,21 @@ a {
   margin-bottom: 2rem;
 }
 
-/* Project images — controlled & uniform */
-.image-block {
+/* 🔥 REAL FIX — control the actual images */
+.project-images img {
   width: 100%;
-  height: 360px;        /* SAME SIZE FOR ALL */
-  object-fit: cover;   /* uniform crop */
-  background: #eee;
+  height: 360px;        /* SAME SIZE FOR ALL (DESKTOP) */
+  object-fit: cover;
+  display: block;
   margin-bottom: 2.5rem;
 }
 
 /* =====================================================
    MOBILE REFINEMENT SYSTEM
-   Author: Ahmed Azab
-   Purpose: Clean, readable, architect-grade mobile layout
 ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* ------------------
-     Global
-  ------------------ */
   body {
     font-size: 15px;
   }
@@ -218,9 +194,6 @@ a {
     padding: 1.5rem;
   }
 
-  /* ------------------
-     Header
-  ------------------ */
   .site-header {
     padding: 0.5rem 0;
   }
@@ -245,9 +218,7 @@ a {
     font-size: 0.85rem;
   }
 
-  /* ------------------
-     Home Page
-  ------------------ */
+  /* Home */
   .home-hero {
     padding: 4.5rem 0 3.5rem;
   }
@@ -262,9 +233,6 @@ a {
     margin-top: 0.75rem;
   }
 
-  /* ------------------
-     Headings
-  ------------------ */
   h1 {
     font-size: 1.7rem;
   }
@@ -273,36 +241,18 @@ a {
     font-size: 1.05rem;
   }
 
-  /* ------------------
-     Portfolio Grid
-  ------------------ */
+  /* Portfolio */
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     margin-top: 3rem;
   }
 
-  .project-card {
-    width: 100%;
-  }
-
-  .project-card h2 {
-    margin-top: 0.8rem;
-  }
-
-  .project-card p {
-    font-size: 0.8rem;
-  }
-
-  /* Portfolio cover images (unchanged logic) */
   .thumb {
-    height: 200px;          /* consistent covers */
-    object-fit: cover;
+    height: 200px;
   }
 
-  /* ------------------
-     Project Page
-  ------------------ */
+  /* Project page — MOBILE IMAGE CONTROL */
   .project {
     max-width: 100%;
   }
@@ -317,16 +267,12 @@ a {
     margin-bottom: 2rem;
   }
 
-  /* Project images — SAME SIZE ON MOBILE */
-  .image-block {
-    height: 220px;          /* reduced + uniform */
-    object-fit: cover;
+  .project-images img {
+    height: 220px;      /* SAME SIZE FOR ALL (MOBILE) */
     margin-bottom: 2rem;
   }
 
-  /* ------------------
-     About Page
-  ------------------ */
+  /* About */
   .about {
     padding: 4rem 0;
   }
@@ -353,17 +299,7 @@ a {
     font-size: 0.95rem;
   }
 
-  /* ------------------
-     Photography Page
-  ------------------ */
-  .photo-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  /* ------------------
-     Footer
-  ------------------ */
+  /* Footer */
   .site-footer {
     margin-top: 4rem;
     padding: 2rem 0;
@@ -373,6 +309,4 @@ a {
     font-size: 0.75rem;
     text-align: left;
   }
-
 }
-
