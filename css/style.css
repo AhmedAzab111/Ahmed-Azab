@@ -164,7 +164,7 @@ a {
 
 /* Text column */
 .project {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -180,14 +180,14 @@ a {
 
 /* 🔴 HERO IMAGE ZONE (RED RECTANGLE) */
 .project-images {
-  max-width: 1500px;   /* SAME AS HEADER CONTAINER */
+  max-width: 1200px;   /* SAME AS HEADER CONTAINER */
   margin: 4rem auto;   /* CENTERED */
 }
 
 /* 🔥 HERO IMAGE — FILLS THE RECTANGLE */
 .project-images img {
   width: 100%;
-  height: 520px;       /* CONTROLS RECTANGLE HEIGHT */
+  height: 820px;       /* CONTROLS RECTANGLE HEIGHT */
   object-fit: cover;  /* FILL AREA */
   display: block;
 }
