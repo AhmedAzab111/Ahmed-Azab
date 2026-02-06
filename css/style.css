@@ -151,7 +151,7 @@ a {
   color: var(--gray);
 }
 
-/* Portfolio cover images ONLY */
+/* Portfolio cover images */
 .thumb,
 .project-thumb,
 .project-card img {
@@ -163,46 +163,43 @@ a {
 }
 
 /* ==================
-   Project Page (FIXED)
+   Project Page — FINAL
 ================== */
 
-/* Center the whole project content */
+/* Project text column */
 .project {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-/* Meta text */
+/* Meta */
 .meta {
   color: var(--gray);
   margin-bottom: 3rem;
 }
 
-/* Paragraph spacing */
 .project-content p {
   margin-bottom: 2rem;
 }
 
-/* Image column — THIS IS THE KEY */
+/* 🔥 IMAGE ZONE ALIGNED WITH HEADER */
 .project-images {
-  max-width: 820px;          /* controls image width */
-  margin: 4rem auto;         /* centers under title */
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;                 /* BIG GUTTER BETWEEN IMAGES */
+  max-width: 1200px;     /* SAME AS HEADER */
+  margin: 5rem auto;     /* CENTER BETWEEN LOGO & NAV */
 }
 
-/* ALL project images — CENTERED & NOT CROPPED */
+/* Image itself */
 .project-images img {
   width: 100%;
-  height: auto;              /* NO FIXED HEIGHT */
-  object-fit: contain;       /* NO CROPPING */
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;   /* NO CROPPING */
   display: block;
   margin: 0 auto;
 }
 
 /* =====================================================
-   MOBILE REFINEMENT SYSTEM
+   MOBILE
 ===================================================== */
 @media (max-width: 768px) {
 
@@ -214,7 +211,6 @@ a {
     padding: 1.5rem;
   }
 
-  /* Header */
   .site-header {
     padding: 0.5rem 0;
   }
@@ -229,54 +225,20 @@ a {
     margin-bottom: 0.5rem;
   }
 
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .nav a {
     margin: 0 1.5rem 0.5rem 0;
     font-size: 0.85rem;
   }
 
-  /* Home */
-  .home-hero {
-    padding: 4.5rem 0 3.5rem;
-  }
-
   .home-name {
     font-size: 2.1rem;
-    line-height: 1.2;
   }
 
   .home-title {
     font-size: 0.85rem;
-    margin-top: 0.75rem;
   }
 
-  h1 {
-    font-size: 1.7rem;
-  }
-
-  h2 {
-    font-size: 1.05rem;
-  }
-
-  /* Portfolio */
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 3rem;
-  }
-
-  .thumb,
-  .project-thumb,
-  .project-card img {
-    height: 200px;
-  }
-
-  /* Project Page — MOBILE */
-
+  /* Project page mobile */
   .project {
     max-width: 100%;
   }
@@ -284,51 +246,13 @@ a {
   .project-images {
     max-width: 100%;
     margin: 3rem auto;
-    gap: 3rem;
   }
 
   .project-images img {
-    max-height: 320px;   /* safety limit only */
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
+    max-height: 320px;
   }
 
-  /* About */
-  .about {
-    padding: 4rem 0;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .about-image {
-    max-width: 260px;
-  }
-
-  .about-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-  }
-
-  .about-content p {
-    font-size: 0.95rem;
-  }
-
-  /* Footer */
   .site-footer {
-    margin-top: 4rem;
     padding: 2rem 0;
-  }
-
-  .site-footer p {
-    font-size: 0.75rem;
-    text-align: left;
   }
 }
