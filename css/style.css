@@ -137,17 +137,16 @@ a {
   margin-top: 4rem;
 }
 
-/* Project card (ONLY inside portfolio) */
+/* Portfolio Project Card */
 .portfolio-grid .project-card {
   position: relative;
+  height: 220px;
   overflow: hidden;
   display: block;
-  height: 220px;
-  cursor: pointer;
   text-decoration: none;
 }
 
-/* Portfolio cover images ONLY */
+/* Portfolio Cover Image */
 .portfolio-grid .project-thumb {
   width: 100%;
   height: 100%;
@@ -155,8 +154,6 @@ a {
   display: block;
   background: #eee;
   transition: opacity 0.4s ease;
-  position: relative;
-  z-index: 1;
 }
 
 /* Overlay */
@@ -167,26 +164,25 @@ a {
   background: rgba(0, 0, 0, 0.55);
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 2;
 }
 
-/* Hide title & subtitle by default */
+/* Title + Subtitle (hidden by default) */
 .portfolio-grid .project-card h2,
 .portfolio-grid .project-card p {
   position: absolute;
   left: 0;
   right: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  z-index: 3;
   text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* Title */
 .portfolio-grid .project-card h2 {
   top: 45%;
-  transform: translateY(10px);
   font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
@@ -195,12 +191,11 @@ a {
 /* Subtitle */
 .portfolio-grid .project-card p {
   top: 55%;
-  transform: translateY(10px);
   font-size: 0.9rem;
   color: #ddd;
 }
 
-/* Hover effects */
+/* Hover Effects */
 .portfolio-grid .project-card:hover .project-thumb {
   opacity: 0.35;
 }
@@ -215,100 +210,40 @@ a {
   transform: translateY(0);
 }
 
-
-/* Title */
-.project-card h2 {
-  font-size: 1.3rem;
-  font-
-
-
-/* Title style */
-.project-card h2 {
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 600;
-  transform: translateY(10px);
-}
-
-/* Subtitle style */
-.project-card p {
-  color: #ddd;
-  font-size: 0.9rem;
-  margin-top: 2.5rem;
-  transform: translateY(10px);
-}
-
-/* Overlay using ::after */
-.project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* Portfolio cover images ONLY */
-.thumb,
-.project-thumb,
-.project-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  background: #eee;
-  transition: opacity 0.4s ease;
-}
-
-/* Hover effects */
-.project-card:hover img {
-  opacity: 0.35;
-}
-
-.project-card:hover::after {
-  opacity: 1;
-}
-
-.project-card:hover h2,
-.project-card:hover p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* ==================
-   Project Page — FINAL HERO SOLUTION
+   Project Page
 ================== */
 
-/* Text column */
 .project {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Meta */
-.meta {
+.project-meta {
   color: var(--gray);
   margin-bottom: 3rem;
 }
 
-.project-content p {
-  margin-bottom: 2rem;
-}
-
-/* 🔴 HERO IMAGE ZONE (RED RECTANGLE) */
+/* Project Images Container */
 .project-images {
-  max-width: 1200px;   /* SAME AS HEADER CONTAINER */
-  margin: 4rem auto;   /* CENTERED */
+  max-width: 1200px;
+  margin: 4rem auto;
 }
 
-/* 🔥 HERO IMAGE — FILLS THE RECTANGLE */
+/* Project Images (FULL WIDTH, NO CROPPING BUGS) */
 .project-images img {
   width: 100%;
-  height: 820px;       /* CONTROLS RECTANGLE HEIGHT */
-  object-fit: cover;  /* FILL AREA */
+  height: auto;
   display: block;
+  margin-bottom: 3rem;
 }
+
+/* Optional HERO image (first image only) */
+.project-images img:first-child {
+  height: 820px;
+  object-fit: cover;
+}
+
 
 /* =====================================================
    MOBILE
