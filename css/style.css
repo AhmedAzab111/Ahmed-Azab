@@ -322,15 +322,17 @@ a {
     transform: translateX(0);
   }
 
-  /* Close (X) button */
-  .menu-close {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    align-self: flex-end;
-    margin: 2rem;
-  }
+/* Close (X) button – top left */
+.menu-close {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
   /* Menu links */
   .mobile-nav {
