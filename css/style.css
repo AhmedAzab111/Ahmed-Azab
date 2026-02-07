@@ -86,9 +86,10 @@ a {
   max-width: 600px;
 }
 
-/* ==================
-   About Page
-================== */
+/* =========================
+   ABOUT PAGE – DESKTOP BASE
+========================= */
+
 .about {
   padding: 6rem 0;
 }
@@ -100,27 +101,37 @@ a {
   align-items: start;
 }
 
+/* Image column */
 .about-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Intro block beside image */
+.about-intro {
+  margin-bottom: 2.5rem;
+}
+
+/* Typography – applies everywhere */
 .about-content h1 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.15;
+  margin: 0;
 }
 
 .about-subtitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 400;
   color: #777;
+  margin-top: 0.4rem;
 }
 
 .about-content h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  margin: 3rem 0 1rem;
 }
 
 .about-content p {
@@ -128,7 +139,9 @@ a {
   font-weight: 400;
   line-height: 1.8;
   color: #444;
+  max-width: 100%;
 }
+
 
 /* ==================
    Portfolio Grid
@@ -370,15 +383,15 @@ a {
     padding: 4rem 0;
   }
 
-  /* Keep grid, just adjust columns */
+  /* Keep grid, change behavior */
   .about-grid {
     grid-template-columns: auto 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
-  /* Image sizing */
+  /* Bigger image on mobile */
   .about-image {
-    max-width: 110px;
+    max-width: 150px;
   }
 
   .about-image img {
@@ -387,17 +400,33 @@ a {
     display: block;
   }
 
-  /* Name + subtitle beside image */
+  /* Name + title beside image */
   .about-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 0;
   }
 
-  /* Body text stays full width */
+  /* Body text goes full width BELOW */
   .about-body {
     grid-column: 1 / -1;
     margin-top: 2.5rem;
   }
+
+  /* Paragraph spacing for readability */
+  .about-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Slightly smaller name on small screens */
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.95rem;
+  }
 }
+
 
