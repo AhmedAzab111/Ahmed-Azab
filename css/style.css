@@ -107,24 +107,27 @@ a {
 }
 
 .about-content h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .about-subtitle {
-  font-size: 0.9rem;
-  color: var(--gray);
-  margin-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
 }
 
 .about-content h2 {
-  font-size: 1.1rem;
-  margin: 3rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .about-content p {
   font-size: 0.95rem;
-  max-width: 600px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444;
 }
 
 /* ==================
@@ -359,58 +362,42 @@ a {
 }
 
 /* =====================================================
-   ABOUT PAGE – MOBILE & TABLET (≤ 1024px)
+   ABOUT PAGE – MOBILE ONLY (≤ 767px)
 ===================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 
   .about {
     padding: 4rem 0;
   }
 
-  /* Switch from grid to vertical flow */
+  /* Keep grid, just adjust columns */
   .about-grid {
-    display: block;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
   }
 
-  /* Image + name row */
+  /* Image sizing */
   .about-image {
-    max-width: 120px;
+    max-width: 110px;
   }
 
   .about-image img {
     width: 100%;
+    height: auto;
+    display: block;
   }
 
+  /* Name + subtitle beside image */
   .about-intro {
     display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .about-content h1 {
-    font-size: 1.6rem;
-    margin: 0;
-    line-height: 1.2;
-  }
-
-  .about-subtitle {
-    font-size: 0.9rem;
-    margin: 0.25rem 0 0;
-  }
-
-  /* Full-width body text */
+  /* Body text stays full width */
   .about-body {
-    width: 100%;
-  }
-
-  .about-content h2 {
-    font-size: 1.05rem;
-    margin: 2.5rem 0 0.75rem;
-  }
-
-  .about-content p {
-    font-size: 0.95rem;
-    max-width: 100%;
+    grid-column: 1 / -1;
+    margin-top: 2.5rem;
   }
 }
+
