@@ -113,7 +113,11 @@ a {
   margin-bottom: 2.5rem;
 }
 
-/* Typography – applies everywhere */
+/* =========================
+   ABOUT – TYPOGRAPHY (ALL SCREENS)
+========================= */
+
+/* Name */
 .about-content h1 {
   font-size: 5.5rem;
   font-weight: 700;
@@ -121,26 +125,33 @@ a {
   margin: 0;
 }
 
+/* Subtitle (title under name) */
 .about-subtitle {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
+  line-height: 1.5;
   color: #777;
   margin-top: 0.4rem;
+  margin-bottom: 0; /* critical: prevents paragraph spacing */
 }
 
+/* Section titles */
 .about-content h2 {
   font-size: 1.2rem;
   font-weight: 700;
   margin: 3rem 0 1rem;
 }
 
-.about-content p {
+/* Body text ONLY */
+.about-body p {
   font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.8;
   color: #444;
+  margin-bottom: 1.25rem;
   max-width: 100%;
 }
+
 
 
 /* ==================
@@ -392,7 +403,7 @@ a {
 
   /* Image (bigger, left) */
   .about-image {
-    max-width: 150px;
+    max-width: 180px;
   }
 
   .about-image img {
@@ -417,7 +428,7 @@ a {
   /* Body text goes FULL WIDTH below */
   .about-body {
     grid-column: 1 / -1;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   /* Paragraph spacing */
@@ -427,11 +438,44 @@ a {
 
   /* Slightly scale text for mobile */
   .about-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .about-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.55rem;
+  }
+}
+
+/* =====================================================
+   PORTFOLIO – MOBILE GRID (2 COLUMNS)
+===================================================== */
+@media (max-width: 767px) {
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  /* Slightly taller cards for readability */
+  .portfolio-grid .project-card {
+    height: 200px;
+  }
+
+  /* Disable hover-only behavior on mobile */
+  .portfolio-grid .project-card::after,
+  .portfolio-grid .project-card h2 {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Make title readable on mobile */
+  .portfolio-grid .project-card h2 {
+    position: absolute;
+    bottom: 1rem;
+    top: auto;
+    font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }
 
