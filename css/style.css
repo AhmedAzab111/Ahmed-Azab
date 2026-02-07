@@ -161,7 +161,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(209, 209, 209, 0.55);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -185,14 +185,14 @@ a {
   top: 45%;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fff;
+  color: #000000;
 }
 
 /* Subtitle */
 .portfolio-grid .project-card p {
   top: 55%;
   font-size: 0.9rem;
-  color: #ddd;
+  color: #393939;
 }
 
 /* Hover Effects */
