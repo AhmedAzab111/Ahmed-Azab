@@ -447,7 +447,7 @@ a {
 }
 
 /* =====================================================
-   PORTFOLIO – MOBILE GRID (2 COLUMNS)
+   PORTFOLIO – MOBILE GRID (2 COLUMNS, CLEAN HOVER)
 ===================================================== */
 @media (max-width: 767px) {
 
@@ -457,27 +457,73 @@ a {
     margin-top: 2.5rem;
   }
 
-  /* Slightly taller cards for readability */
+  /* Natural card sizing */
   .portfolio-grid .project-card {
-    height: 200px;
+    height: auto;
   }
 
-  /* Disable hover-only behavior on mobile */
-  .portfolio-grid .project-card::after,
+  /* Keep horizontal thumbnail ratio */
+  .portfolio-grid .project-thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Overlay stays hidden by default */
+  .portfolio-grid .project-card::after {
+    opacity: 0;
+  }
+
+  /* Title — centered & smaller */
   .portfolio-grid .project-card h2 {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;          /* FIXED size */
+    font-weight: 600;
+    padding: 0 0.75rem;
+    line-height: 1.3;
+    opacity: 0;
+  }
+
+  /* Hover / tap behavior */
+  .portfolio-grid .project-card:hover::after,
+  .portfolio-grid .project-card:hover h2 {
     opacity: 1;
-    transform: none;
-  }
-
-  /* Make title readable on mobile */
-  .portfolio-grid .project-card h2 {
-    position: absolute;
-    bottom: 1rem;
-    top: auto;
-    font-size: 1rem;
-    padding: 0 0.5rem;
+    transform: translateY(-50%);
   }
 }
+
+
+
+/* =========================
+   GLOBAL HEADER CLICK FIX
+========================= */
+
+/* Header always above page content */
+.site-header {
+  position: relative;
+  z-index: 100;
+}
+
+/* Explicitly lift the hamburger button */
+.menu-toggle {
+  position: relative;
+  z-index: 200;
+}
+
+/* Push portfolio grid below header in stacking order */
+.portfolio-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Never allow overlays to catch taps */
+.portfolio-grid .project-card::after {
+  pointer-events: none;
+}
+
+
 
 
 
