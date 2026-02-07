@@ -357,3 +357,60 @@ a {
     display: none;
   }
 }
+
+/* =====================================================
+   ABOUT PAGE – MOBILE & TABLET (≤ 1024px)
+===================================================== */
+@media (max-width: 1024px) {
+
+  .about {
+    padding: 4rem 0;
+  }
+
+  /* Switch from grid to vertical flow */
+  .about-grid {
+    display: block;
+  }
+
+  /* Image + name row */
+  .about-image {
+    max-width: 120px;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .about-intro {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-content h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .about-subtitle {
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+  }
+
+  /* Full-width body text */
+  .about-body {
+    width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 1.05rem;
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}

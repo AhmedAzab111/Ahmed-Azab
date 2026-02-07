@@ -13,6 +13,13 @@
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Ahmed Azab</a>
+
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav class="nav">
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
@@ -21,59 +28,73 @@
   </div>
 </header>
 
+<div class="mobile-menu">
+  <button class="menu-close" aria-label="Close menu">×</button>
+  <nav class="mobile-nav">
+    <a href="about.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+</div>
+
 <main>
   <section class="about">
     <div class="container about-grid">
 
-      <!-- Image -->
       <div class="about-image">
-        <img src="assets/images/about/ahmed-azab-portrait.jpg" 
-             alt="Portrait of Ahmed Azab">
+        <img
+          src="assets/images/about/ahmed-azab-portrait.jpg"
+          alt="Portrait of Ahmed Azab">
       </div>
 
-      <!-- Content -->
       <div class="about-content">
 
-        <h1>Ahmed Azab</h1>
-        <p class="about-subtitle">
-          LEED® Green Associate™ | Digital Architecture Student
-        </p>
+        <div class="about-intro">
+          <h1>Ahmed Azab</h1>
+          <p class="about-subtitle">
+            LEED® Green Associate™ | Digital Architecture Student
+          </p>
+        </div>
 
-        <h2>Background</h2>
-        <p>
-          Ahmed Azab is a final-year architecture student in the Digital Architecture Program
-          at Galala University. His academic work focuses on integrating advanced digital
-          tools with architectural design, with particular attention to environmental
-          performance and cultural context. As a LEED® Green Associate™, he approaches
-          sustainability as a core design principle rather than a technical add-on.
-        </p>
+        <div class="about-body">
 
-        <p>
-          Alongside architecture, Ahmed is a content creator, amateur photographer, and
-          videographer with a strong interest in documenting Egypt’s architectural identity.
-          This visual practice informs his architectural thinking by strengthening his
-          sensitivity to atmosphere, materiality, and the lived experience of space.
-        </p>
+          <h2>Background</h2>
+          <p>
+            Ahmed Azab is a final-year architecture student in the Digital Architecture Program
+            at Galala University. His academic work focuses on integrating advanced digital
+            tools with architectural design, with particular attention to environmental
+            performance and cultural context. As a LEED® Green Associate™, he approaches
+            sustainability as a core design principle rather than a technical add-on.
+          </p>
 
-        <h2>Design Focus</h2>
-        <p>
-          Ahmed’s design interests lie in parametric design, digital fabrication, and
-          AI-driven workflows as tools for exploring form, performance, and spatial logic.
-          He is especially interested in the role of digital methodologies in heritage
-          contexts, and how contemporary architecture can engage existing environments in a
-          meaningful and responsible way.
-        </p>
+          <p>
+            Alongside architecture, Ahmed is a content creator, amateur photographer, and
+            videographer with a strong interest in documenting Egypt’s architectural identity.
+            This visual practice informs his architectural thinking by strengthening his
+            sensitivity to atmosphere, materiality, and the lived experience of space.
+          </p>
 
-        <h2>Professional Exposure</h2>
-        <p>
-          Through internships and collaborative projects, Ahmed has gained experience in
-          architectural modeling, visualization, environmental analysis, and sustainability
-          documentation. His exposure to professional practice has strengthened his ability
-          to navigate different stages of the design process while maintaining conceptual
-          clarity and technical rigor.
-        </p>
+          <h2>Design Focus</h2>
+          <p>
+            Ahmed’s design interests lie in parametric design, digital fabrication, and
+            AI-driven workflows as tools for exploring form, performance, and spatial logic.
+            He is especially interested in the role of digital methodologies in heritage
+            contexts, and how contemporary architecture can engage existing environments in a
+            meaningful and responsible way.
+          </p>
 
+          <h2>Professional Exposure</h2>
+          <p>
+            Through internships and collaborative projects, Ahmed has gained experience in
+            architectural modeling, visualization, environmental analysis, and sustainability
+            documentation. His exposure to professional practice has strengthened his ability
+            to navigate different stages of the design process while maintaining conceptual
+            clarity and technical rigor.
+          </p>
+
+        </div>
       </div>
+
     </div>
   </section>
 </main>
@@ -83,6 +104,8 @@
     <p>© 2026 Ahmed Azab</p>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
